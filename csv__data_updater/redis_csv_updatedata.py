@@ -22,7 +22,7 @@ def csv_data(request):
             alldata = line.decode('utf-8').split(',')
             data = [alldata[0],alldata[1],alldata[4],alldata[5],alldata[6],alldata[7]]
             newdata.append(data)
-    r.set("ids2", str(data))
+    r.set("ids2", str(newdata))
    
     
    
