@@ -19,5 +19,5 @@ def bhav_copy(request):
     r = redis.StrictRedis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
     keys = r.keys('*')
     msg = r.get('ids2')
-    params = {'allProds':alldata}
+    params = {'allProds':msg}
     return render(request, 'stocks.html', params)
