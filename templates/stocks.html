@@ -17,7 +17,7 @@
         <tbody>
             {% load polls_extras %}                  
             {% with allProds|split:"," as skills %}
-            {% if i != None%}
+           
             {% for skill in skills %}
                 <tr>
                 <td>{{skill.0}}</td>    
@@ -28,7 +28,7 @@
                 <td>{{skill.5}}</td>
                 </tr>
             {% endfor %}  
-            {%endif%}
+           
             {% endwith %}
         </tbody>
     </table>
