@@ -11,7 +11,7 @@ redis_port = 15364
 redis_password = "iQuSqk1AO4S4M6JW4gXB45SZzQqL4Del"
 zipfile = ZipFile(BytesIO(resp.read()))
 def csv_data(request):
-    r = redis.StrictRedis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
+    r = redis.Redis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
     for key in r.scan_iter("prefix:*"):
         r.delete(key)
     count=1
