@@ -20,4 +20,5 @@ def bhav_copy(request):
     keys = r.keys('*')
     msg = r.get('ids2')
     params = {'allProds':msg}
+    print(params)
     return render(request, 'stocks.html', params)
