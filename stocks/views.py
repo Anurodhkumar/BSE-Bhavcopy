@@ -16,7 +16,7 @@ register = template.Library()
 
 def bhav_copy(request):
     alldata= []
-    r = redis.StrictRedis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
+    r = redis.Redis(host=redis_host, port=redis_port, password=redis_password, decode_responses=True)
     keys = r.keys('*')
     msg = r.get('ids2')
     params = {'allProds':msg}
